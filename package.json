@@ -1,0 +1,22 @@
+{
+  "name": "press-link-call",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "postinstall": "node scripts/patch-moq-safari.mjs",
+    "dev": "npm run build --workspace @press-link-call/web && npm run dev --workspace @press-link-call/worker",
+    "dev:web": "npm run dev --workspace @press-link-call/web",
+    "build": "npm run build --workspace @press-link-call/web && npm run build --workspace @press-link-call/worker",
+    "deploy": "npm run build --workspace @press-link-call/web && npm run deploy --workspace @press-link-call/worker",
+    "test": "npm run test --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

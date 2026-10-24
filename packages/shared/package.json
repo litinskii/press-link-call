@@ -1,0 +1,11 @@
+{
+  "name": "@press-link-call/shared",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./api": "./api.ts",
+    "./crypto": "./crypto.ts",
+    "./room": "./room.ts"
+  }
+}

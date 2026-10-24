@@ -1,0 +1,16 @@
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' blob: 'wasm-unsafe-eval'; style-src 'self'; img-src 'self' data: blob:; font-src 'self' data:; media-src 'self' blob:; connect-src 'self' https://draft-16.cloudflare.mediaoverquic.com wss://draft-16.cloudflare.mediaoverquic.com; worker-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: require-corp
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer
+  Permissions-Policy: camera=(self), microphone=(self), display-capture=(self)
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/r/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+
+/call-ended
+  X-Robots-Tag: noindex, nofollow, noarchive

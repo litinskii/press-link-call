@@ -1,0 +1,38 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "press-link-call",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-25",
+  "assets": {
+    "directory": "../web/dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  },
+  "vars": {
+    "MOQ_RELAY_URL": "https://draft-16.cloudflare.mediaoverquic.com",
+    "MOQ_RELAY_ID": "press-link-call"
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "ROOMS",
+        "class_name": "RoomDurableObject"
+      },
+      {
+        "name": "RATE_LIMITS",
+        "class_name": "RateLimitDurableObject"
+      }
+    ]
+  },
+  "exports": {
+    "RoomDurableObject": {
+      "type": "durable-object",
+      "storage": "sqlite"
+    },
+    "RateLimitDurableObject": {
+      "type": "durable-object",
+      "storage": "sqlite"
+    }
+  }
+}

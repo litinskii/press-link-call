@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://press-link-call.w-siteee.workers.dev/sitemap.xml

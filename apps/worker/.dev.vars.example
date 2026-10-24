@@ -1,0 +1,7 @@
+# Optional local overrides. Do not commit real credentials.
+MOQ_RELAY_URL=https://draft-16.cloudflare.mediaoverquic.com
+MOQ_RELAY_ID=press-link-call
+MOQ_RELAY_TOKEN=replace-with-your-saved-publish-subscribe-token
+
+# For test-only local work without an account relay, remove MOQ_RELAY_TOKEN and use:
+# MOQ_RELAY_URL=https://cdn.moq.dev/anon

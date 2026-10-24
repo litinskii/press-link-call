@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <style>
+    .camera { fill: #0b0c0f; }
+    @media (prefers-color-scheme: dark) { .camera { fill: #f6f7f9; } }
+  </style>
+  <rect class="camera" x="72" y="144" width="264" height="224" rx="60"/>
+  <path class="camera" d="M336 202 444 146v220l-108-56Z"/>
+</svg>
